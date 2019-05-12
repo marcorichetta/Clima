@@ -20,9 +20,7 @@ class App extends Component {
   // se hace el fetch de la data
   componentDidMount() {
     fetch(
-      `https://api.apixu.com/v1/forecast.json?key=${
-      process.env.REACT_APP_API_KEY
-      }&q=Las+Perdices&days=6`
+      `/.netlify/functions/getWeather`
     )
       .then(response => response.json())
       .then(jsonData => {
